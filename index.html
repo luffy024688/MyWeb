@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avery工作室｜個人網站</title>
+<meta name="description" content="Avery工作室個人網站">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Avery工作室">
+<meta property="og:description" content="郝逸清 Avery Hau — 資料分析 × AI 應用 × 商業應用。數據分析師，專長爬蟲、前處理、資料視覺化與機器學習。">
+<meta name="author" content="郝逸清 Avery Hau">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="twitter:title" content="Avery工作室">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+(function(){
+  const saved = localStorage.getItem('theme');
+  const theme = saved || 'dark';
+  document.documentElement.setAttribute('data-theme', theme);
+  addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    const sync = () => {
+      const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+      btn.textContent = dark ? '☀️' : '🌙';
+      btn.setAttribute('aria-label', dark ? '切換淺色模式' : '切換深色模式');
+    };
+    sync();
+    btn.addEventListener('click', () => {
+      const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      sync();
+      dispatchEvent(new Event('resize'));
+    });
+  });
+})();
+</script>
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+
+<!-- ===== Nav ===== -->
+<nav>
+  <div class="container nav-inner">
+    <a class="nav-logo" href="#top" aria-label="Avery工作室">
+      <svg class="nav-mark" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="currentColor" d="M2.3 10.7 21 2.4c.5-.2 1 .3.8.8l-8.3 18.7c-.2.6-1.1.6-1.3 0l-3-7.6-7.6-3c-.6-.2-.6-1.1 0-1.3Zm7.2 3.1 2.2 5.5 5.8-13.1-8 7.6Z"/>
+      </svg>
+      <span class="nav-logo-text" data-i18n="logo">Avery工作室</span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about" data-i18n="nav.about">關於我</a></li>
+      <li><a href="#works" data-i18n="nav.works">作品集</a></li>
+      <li><a href="#articles" data-i18n="nav.articles">文章</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">聯絡我</a></li>
+      <li>
+        <button type="button" class="nav-lang" id="lang-toggle" title="Switch language">EN</button>
+      </li>
+    </ul>
+    <div class="nav-tools">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切換深淺色模式">☀️</button>
+      <button class="nav-burger" id="nav-burger" aria-label="選單" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== Hero ===== -->
+<header class="hero" id="top">
+  <div class="container hero-inner">
+    <div class="hero-avatar-wrap"><img class="hero-avatar" fetchpriority="high" src="assets/img/profile.jpg" alt="郝逸清 Avery Hau" width="848" height="848"></div>
+    <div class="eyebrow">DATA × AI × BUSINESS</div>
+    <h1>郝逸清<small>AVERY HAU</small></h1>
+    <p class="hero-sub"><b>資料分析</b> × <b>AI 應用</b> × <b>商業應用</b></p>
+    <div class="hero-chips">
+      <span class="chip"><strong>5 年</strong><span class="chip-lbl">數據領域經驗</span></span>
+      <span class="chip"><strong>金融／數位行銷</strong><span class="chip-lbl">領域</span></span>
+    </div>
+    <div class="hero-actions">
+      <a class="btn btn--hero" href="#contact">聯絡我</a>
+      <a class="btn btn--ghost" href="#works">看作品集</a>
+      <a class="btn btn--ghost" href="#articles">看文章</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== About ===== -->
+<section id="about">
+  <div class="container">
+    <div class="eyebrow">ABOUT</div>
+    <h2>關於我</h2>
+    <div class="about-grid about-grid--solo">
+      <div class="about-text">
+        <p class="about-lead">我畢業於台灣大學經濟所，目前是一位數據分析師，喜歡從數據中挖掘洞察，並擅長爬蟲、前處理、資料分析、文字處理、資料視覺化、機器學習。過去涉足數位廣告產業及金融產業，未來希望能參與數據分析策略規劃之專案，提供商業問題之解決方案。</p>
+        
+        <ul class="edu-list">
+          <li><span class="edu-degree">碩士</span><span>台大經濟所</span></li>
+          <li><span class="edu-degree">學士</span><span>中興應用經濟系</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 線上課程 ===== -->
+<section id="works">
+  <div class="container">
+    <div class="eyebrow">PORTFOLIO</div>
+    <h2>作品集</h2>
+    <div class="course-grid">
+      <article class="course-card">
+        <div class="course-body">
+          <h3><a href="https://www.cake.me/resumes/s--nnNOrIAyXzOIdpwuElxtsw--/037bc0" target="_blank" rel="noopener">大眾情緒與股票分析(AI與資料分析實戰班)</a></h3>
+          <p class="course-desc">使用爬蟲抓取PPT-stock版資料，透過NLP將文章分類為正負類後，使用機器學習預測隔日股票漲跌。並使用php及mySQL架設網站後，透過heroku部署網站。</p>
+        </div>
+      </article>
+      <article class="course-card">
+        <div class="course-body">
+          <h3><a href="https://tracy0412.github.io/final2/" target="_blank" rel="noopener">資料科學家</a></h3>
+          <p class="course-desc">從104網站篩出與「資料科學」相關工作，製作出一個包含資訊科學相關文章及具有篩選工作和推薦工作功能的網站，團隊獲得「微課程最佳協作獎」</p>
+        </div>
+      </article>
+      <article class="course-card">
+        <div class="course-body">
+          <h3><a href="https://canva.link/grr3fvbuci75ukc" target="_blank" rel="noopener">好食季(Food-Timing)</a></h3>
+          <p class="course-desc">使用Ｒ語言，爬取CookPad食譜網站，並整合蔬果之卡路里及價格資料後，推薦當季蔬果食譜給用戶。</p>
+        </div>
+      </article>
+      <article class="course-card">
+        <div class="course-body">
+          <h3><a href="https://s99214034.shinyapps.io/shinycase2/" target="_blank" rel="noopener">臉書配對系統</a></h3>
+          <p class="course-desc">利用臉書的API爬好友的PO文，以及運用九型人格心理測驗理論，透過KNN演算法將人分成九類。</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 精選文章 ===== -->
+<section id="articles" class="section-alt">
+  <div class="container">
+    <div class="eyebrow">WRITING</div>
+    <h2>精選文章</h2>
+    <div class="article-grid">
+      <a class="article-card" href="https://medium.com/@avery02468/%E8%AD%89%E7%85%A7-%E5%8A%A0%E6%8B%BF%E5%A4%A7%E6%89%93%E5%B7%A5%E5%BA%A6%E5%81%87-serving-it-right-%E6%94%BB%E7%95%A5-%E9%A1%8C%E5%BA%AB-2025-05-f7a1809e1c98" target="_blank" rel="noopener">
+        <span class="a-tag">證照</span>
+        <h3>[證照]加拿大打工度假｜Serving It Right 攻略＋題庫(2025/05)</h3>
+        <span class="a-more">閱讀文章 →</span>
+      </a>
+      <a class="article-card" href="https://medium.com/@avery02468/sas-base-%E8%AA%8D%E8%AD%89%E8%80%83%E8%A9%A6%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB-2024-02-ed9c3aa48832" target="_blank" rel="noopener">
+        <span class="a-tag">證照</span>
+        <h3>[證照]SAS Base 認證考試心得分享(2025/02)</h3>
+        <span class="a-more">閱讀文章 →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== Contact ===== -->
+<section class="contact" id="contact">
+  <div class="container contact-inner">
+    <div class="contact-title">
+      <div class="eyebrow" style="color:rgba(246,246,246,.6)">CONTACT</div>
+      <h2>聯絡我</h2>
+    </div>
+    <p>歡迎來信或透過以下方式聯繫，聊聊數據分析、AI 應用與商業問題。</p>
+    <form class="contact-form" id="contact-form" novalidate>
+      <div class="contact-form-row">
+        <div class="contact-field">
+          <label for="cf-name">個人姓名 <b>*</b></label>
+          <input id="cf-name" name="name" type="text" required maxlength="50" autocomplete="name" placeholder="怎麼稱呼您？">
+        </div>
+        <div class="contact-field">
+          <label for="cf-email">個人 Email <b>*</b></label>
+          <input id="cf-email" name="email" type="email" required maxlength="100" autocomplete="email" placeholder="you@example.com">
+        </div>
+      </div>
+      <div class="contact-field">
+        <label for="cf-subject">主旨 <b>*</b></label>
+        <input id="cf-subject" name="subject" type="text" required maxlength="120" placeholder="例如：合作洽詢">
+      </div>
+      <div class="contact-field">
+        <label for="cf-content">內容 <b>*</b></label>
+        <textarea id="cf-content" name="content" required maxlength="3000" rows="5" placeholder="想聊的主題或需求，歡迎先簡單描述"></textarea>
+      </div>
+      <input class="cf-hp" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="contact-submit" type="submit">送出洽詢</button>
+      <p class="contact-form-note" role="status" aria-live="polite">送出後我會盡快回覆。</p>
+    </form>
+    <div class="contact-links">
+      <div class="contact-sub">
+        <a class="chip" href="https://medium.com/@avery02468" target="_blank" rel="noopener">Medium 文章</a>
+        <a class="chip" href="https://www.linkedin.com/in/luffy02468/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="chip" href="https://github.com/luffy024688" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="container footer-inner">
+    <a class="footer-brand" href="#top" aria-label="Avery工作室">
+      <svg class="nav-mark" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="currentColor" d="M2.3 10.7 21 2.4c.5-.2 1 .3.8.8l-8.3 18.7c-.2.6-1.1.6-1.3 0l-3-7.6-7.6-3c-.6-.2-.6-1.1 0-1.3Zm7.2 3.1 2.2 5.5 5.8-13.1-8 7.6Z"/>
+      </svg>
+      <span>Avery工作室</span>
+    </a>
+    <span>@Avery HAU</span>
+    <span><a href="#top">個人網站</a></span>
+  </div>
+</footer>
+
+<canvas id="particles" aria-hidden="true"></canvas>
+<script src="assets/js/site-fx.js?v=20261001a"></script>
+<script src="assets/js/contact-form.js?v=20260901c"></script>
+
+<script>
+(function(){
+  const links = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
+  const ids = links.map(a => a.getAttribute('href').slice(1));
+  const map = {};
+  links.forEach((a, i) => { map[ids[i]] = a; });
+  function update(){
+    const pos = scrollY + innerHeight * .35;
+    let cur = ids[0];
+    for (const id of ids){
+      const el = document.getElementById(id);
+      if (el && el.offsetTop <= pos) cur = id;
+    }
+    links.forEach(a => a.classList.toggle('active', a === map[cur]));
+  }
+  addEventListener('scroll', update, {passive: true});
+  addEventListener('resize', update);
+  update();
+})();
+</script>
+<script>
+(function(){
+  const nav = document.querySelector('nav');
+  const burger = document.getElementById('nav-burger');
+  burger.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+  });
+  document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+})();
+</script>
+
+<script>
+(function(){
+  const dict = {
+    zh: {
+      logo: 'Avery工作室',
+      'nav.about': '關於我',
+      'nav.works': '作品集',
+      'nav.articles': '文章',
+      'nav.contact': '聯絡我',
+      toggle: 'EN',
+      title: 'Avery工作室｜個人網站'
+    },
+    en: {
+      logo: 'Avery Studio',
+      'nav.about': 'About',
+      'nav.works': 'Portfolio',
+      'nav.articles': 'Articles',
+      'nav.contact': 'Contact',
+      toggle: '中文',
+      title: 'Avery Studio'
+    }
+  };
+  function apply(lang){
+    const t = dict[lang] || dict.zh;
+    document.documentElement.setAttribute('lang', lang === 'en' ? 'en' : 'zh-Hant');
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (t[key]) el.textContent = t[key];
+    });
+    const logo = document.querySelector('.nav-logo');
+    if (logo) logo.setAttribute('aria-label', t.logo);
+    const btn = document.getElementById('lang-toggle');
+    if (btn) btn.textContent = t.toggle;
+    document.title = t.title;
+    localStorage.setItem('lang', lang);
+  }
+  const start = localStorage.getItem('lang') === 'en' ? 'en' : 'zh';
+  apply(start);
+  document.getElementById('lang-toggle').addEventListener('click', () => {
+    const next = (localStorage.getItem('lang') === 'en') ? 'zh' : 'en';
+    apply(next);
+  });
+})();
+</script>
+</body>
+</html>
