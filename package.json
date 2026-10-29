@@ -7,11 +7,14 @@
   "engines": {
     "node": ">=20"
   },
-  "scripts": {
-    "dev": "serve . -l 8765",
-    "start": "serve . -l 8765",
-    "preview": "serve . -l 8765"
-  },
+ 
+"scripts": {
+  "dev": "serve . -l tcp://127.0.0.1:8765",
+  "dev:network": "serve . -l tcp://0.0.0.0:8765",
+  "start": "serve . -l tcp://127.0.0.1:8765",
+  "preview": "serve . -l tcp://127.0.0.1:8765"
+},
+
   "devDependencies": {
     "serve": "^14.2.5"
   }

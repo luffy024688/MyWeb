@@ -73,20 +73,32 @@ nvm use
 ```bash
 # 安裝依賴
 yarn install
+```
 
-# 啟動本機預覽（預設埠號 8765）
+### 平常開發：只允許本機存取
+
+```bash
 yarn dev
 ```
 
-瀏覽器開啟：[h](http://localhost:8765)
+使用自己的電腦瀏覽網站，例如 [http://localhost:8765](http://localhost:8765)。
+
+### 需要其他裝置連線時
+
+```bash
+yarn dev:network
+```
+
+允許同一區網內的其他裝置連線（例如手機）。請用電腦的區網 IP 開啟，例如 `http://192.168.x.x:8765`。
 
 其他指令：
 
 
-| 指令             | 說明           |
-| -------------- | ------------ |
-| `yarn start`   | 同 `yarn dev` |
-| `yarn preview` | 同 `yarn dev` |
+| 指令               | 說明                    |
+| ---------------- | --------------------- |
+| `yarn start`     | 同 `yarn dev`（僅本機）     |
+| `yarn preview`   | 同 `yarn dev`（僅本機）     |
+| `yarn dev:network` | 允許區網內其他裝置連線 |
 
 
 ---
